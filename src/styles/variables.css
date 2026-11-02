@@ -1,41 +1,15 @@
 :root {
-  /* Colors - Premium Dark Mode */
-  --bg-color: #0a0a0a;
-  --bg-secondary: #111111;
-  --text-primary: #ffffff;
-  --text-secondary: #a0a0a0;
-  --accent-color: #6d28d9; /* Deep Violet */
-  --accent-glow: #8b5cf6;
-  --card-bg: rgba(255, 255, 255, 0.03);
-  --card-border: rgba(255, 255, 255, 0.1);
-  
-  /* Typography */
-  --font-main: 'Inter', sans-serif;
-  --font-heading: 'Outfit', sans-serif;
-  
-  /* Spacing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 4rem;
-  --spacing-xl: 8rem;
-  
-  /* 3D & Effects */
-  --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
-  --shadow-glow: 0 0 20px rgba(109, 40, 217, 0.3);
-  
-  /* Layout */
-  --container-width: 1400px;
-  --header-height: 80px;
-}
-
-html.light {
-  --bg-color: #f3f4f6;
-  --bg-secondary: #ffffff;
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --card-bg: rgba(255, 255, 255, 0.8);
-  --card-border: rgba(0, 0, 0, 0.05);
+  color-scheme: light;
+  --bg: #f7f6f0;
+  --surface: #fffefa;
+  --ink: #202d28;
+  --muted: #59665d;
+  --green: #183c32;
+  --green-hover: #295647;
+  --accent: #c5dea2;
+  --line: #d9ded3;
+  --soft: #edf0e6;
+  --font-main: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --container-width: 1200px;
 }

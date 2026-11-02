@@ -1,0 +1,71 @@
+@media (max-width: 1050px) {
+  .nav-links { gap: 18px; }
+  .hero-copy { grid-template-columns: 1fr; gap: 36px; }
+  .about-grid { gap: 45px; }
+  .skills-layout { gap: 44px; }
+  .contact-grid { gap: 50px; }
+  .experience-row { grid-template-columns: 1fr 1.4fr; gap: 25px; }
+  .experience-date { grid-column: 1 / -1; }
+}
+@media (max-width: 760px) {
+  .container { width: calc(100% - 40px); }
+  .navbar { min-height: 72px; }
+  .brand-mark { font-size: 2.3rem; }
+  .menu-toggle { display: flex; align-items: center; justify-content: center; gap: 18px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 4px; background: transparent; color: var(--green); font-size: .8rem; }
+  .menu-toggle span { font-size: 1.3rem; }
+  .nav-links { display: none; position: absolute; top: 100%; left: -20px; right: -20px; background: var(--bg); padding: 18px 20px; border-bottom: 1px solid var(--line); box-shadow: 0 14px 20px #183c3210; }
+  .nav-links.is-open { display: flex; flex-direction: column; align-items: stretch; gap: 4px; }
+  .nav-links a { width: 100%; padding: 10px 12px; min-height: 48px; }
+  .nav-links li:last-child a { margin-top: 8px; }
+  .hero h1 { font-size: clamp(2.4rem, 7.6vw, 2.7rem); }
+  .about-grid { grid-template-columns: 1fr; gap: 0; }
+  .skills-layout { grid-template-columns: 1fr; gap: 36px; }
+  .project-toolbar { align-items: start; flex-direction: column; gap: 12px; }
+  .projects-grid { gap: 16px; }
+  .project-card { padding: 20px; }
+  .project-result strong { font-size: 2.15rem; }
+  .project-content h3 { font-size: 1.3rem; }
+  .project-topline { gap: 7px; }
+  .featured-label { font-size: .6rem; }
+  .education-panel { padding: 26px; gap: 28px; }
+  .cgpa strong { font-size: 2.7rem; }
+  .achievements-grid { gap: 18px; }
+  .achievements-grid h3 { font-size: 1.2rem; }
+  .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+  .contact-actions { border-left: 0; border-top: 1px solid #567367; padding: 25px 0 0; }
+  .site-footer { flex-wrap: wrap; gap: 4px 18px; }
+  .site-footer p:nth-child(2) { display: none; }
+}
+@media (max-width: 560px) {
+  .projects-grid, .experience-row, .achievements-grid { grid-template-columns: 1fr; }
+  .project-card { padding: 23px; }
+  .project-content h3 { font-size: 1.5rem; }
+  .project-result strong { font-size: 2.6rem; }
+  .achievements-grid { gap: 28px; }
+  .achievement-index { margin-bottom: 18px; }
+  .achievements-grid article { padding-bottom: 4px; }
+  .education-panel { flex-direction: column; align-items: start; }
+  .hero h1 { font-size: clamp(2.2rem, 7.4vw, 2.4rem); }
+  .hero-eyebrow { font-size: .6rem; }
+  .filters { gap: 7px; }
+  .filters button { padding: 10px 12px; font-size: .74rem; }
+  .skill-card-panel { padding: 22px 20px; gap: 18px; }
+  .skill-card-head h3 { font-size: 1.05rem; }
+  .section-heading { margin-bottom: 30px; }
+  .contact-band { padding-block: 56px; }
+  .project-dialog { width: calc(100% - 20px); max-height: calc(100dvh - 24px); }
+  .dialog-toolbar { padding: 12px 18px; }
+  .dialog-content { padding: 25px 20px; }
+  .dialog-content .pipeline { padding: 14px; }
+  .project-notes > div { grid-template-columns: 1fr; gap: 12px; }
+  .project-notes dd { font-size: .9rem; }
+}
+@media (max-width: 360px) {
+  .container { width: calc(100% - 32px); }
+  .hero h1 { font-size: 2.15rem; }
+  .hero-eyebrow { font-size: .55rem; letter-spacing: .04em; }
+  .project-card { padding: 18px; }
+  .skill-grid { grid-template-columns: 1fr; }
+  .brand-caption { font-size: .59rem; }
+  .dialog-toolbar .mono { font-size: .6rem; }
+}

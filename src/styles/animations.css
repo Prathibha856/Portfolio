@@ -1,0 +1,66 @@
+/* ============================================================
+   ANIMATIONS — Reveal system
+   ============================================================ */
+
+.reveal {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: var(--reveal-duration, 700ms);
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+/* Direction variants — horizontal offsets only at widths where the
+   centered container leaves ≥48px side margins, otherwise they would
+   create a horizontal scrollbar before the element reveals. */
+.reveal-up    { transform: translateY(32px); }
+.reveal-down  { transform: translateY(-32px); }
+.reveal-left,
+.reveal-right { transform: translateY(32px); }
+.reveal-fade  { transform: none; }
+
+@media (min-width: 1051px) {
+  .reveal-left  { transform: translateX(-24px); }
+  .reveal-right { transform: translateX(24px); }
+}
+
+/* Visible state */
+.reveal-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Stagger helper: wrap children and add .stagger-* to them */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-stagger.reveal-visible > * {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.reveal-stagger.reveal-visible > *:nth-child(1) { transition-delay: 0ms; }
+.reveal-stagger.reveal-visible > *:nth-child(2) { transition-delay: 80ms; }
+.reveal-stagger.reveal-visible > *:nth-child(3) { transition-delay: 160ms; }
+.reveal-stagger.reveal-visible > *:nth-child(4) { transition-delay: 240ms; }
+.reveal-stagger.reveal-visible > *:nth-child(5) { transition-delay: 320ms; }
+.reveal-stagger.reveal-visible > *:nth-child(6) { transition-delay: 400ms; }
+.reveal-stagger.reveal-visible > *:nth-child(7) { transition-delay: 480ms; }
+.reveal-stagger.reveal-visible > *:nth-child(8) { transition-delay: 560ms; }
+.reveal-stagger.reveal-visible > *:nth-child(9) { transition-delay: 640ms; }
+.reveal-stagger.reveal-visible > *:nth-child(10) { transition-delay: 720ms; }
+
+/* ============================================================
+   ACCESSIBILITY — Disable all animations if user prefers
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
